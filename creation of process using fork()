@@ -1,0 +1,22 @@
+#include<stdio.h>
+#include<unistd.h>
+#include<sys/types.h>
+int main()
+{
+ pid_t p;
+ p=fork();
+ if(p==0)
+ {
+ 	printf("child id=%d\n",getpid());
+ 	printf("Parent id=%d\n",getppid());
+ }
+ else
+ {
+ 	printf("child id=%d\n",p);
+ 	printf("Parent id=%d\n",getppid());
+ 	
+ }
+	
+
+	return 0;
+}
